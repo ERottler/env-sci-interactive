@@ -19,7 +19,16 @@ ui <- dashboardPage(
   dashboardSidebar(disable = TRUE),
   
   dashboardBody(
-    
+    tags$head(tags$style(HTML('
+                              
+                              /* body */
+                              .content-wrapper, .right-side {
+                              background-color: lightgrey;
+                              # font-family: Times New Roman;
+  
+                              }
+                              
+                              '))),
     fluidRow(
       
       #left column of the Shiny dashbboard
@@ -38,8 +47,8 @@ ui <- dashboardPage(
                
                tags$p("The Hydro Explorer is an interactive web application that enables the investigation of of more than 7000 daily resolution discharge time
                       series form the Global Runoff Data Centre (GRDC) wiht regard to changs in runoff timing and ruoff seasonality. The web app allows for a 
-                      quick comparison of gauges regions, methods and time frames. A detailed description is included into the", 
-                      tags$a("research artile", href = "https://doi.org/10.1002/rra.3772"), "pubblished in River Reserach and Applications"
+                      quick comparison of gauges regions, methods and time frames. A detailed description using examples from the Rhine River basin is included into the", 
+                      tags$a("research artile", href = "https://doi.org/10.1002/rra.3772"), "pubblished in River Reserach and Applications."
                       ),
                tags$p("Web App:", tags$a("http://natriskchange.ad.umwelt.uni-potsdam.de:3838/HydroExplorer/", 
                                          href ="http://natriskchange.ad.umwelt.uni-potsdam.de:3838/HydroExplorer/")),
@@ -63,15 +72,6 @@ local meteorological network."),
                                          href ="http://seca-vista.geo.uni-potsdam.de:3838/seca-vista-app/")),
                tags$p("Research Article:", tags$a("https://hess.copernicus.org/articles/22/5041/2018/", 
                                                 href ="https://hess.copernicus.org/articles/22/5041/2018/"))
-               
-             ),
-
-             
-             box(
-               title = "Add Title", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
-               
-               tags$p("Add description"
-               )
                
              )
              ),
@@ -119,13 +119,7 @@ efficiently render large amounts of watermasks and serve them to a web applicati
                                              href ="https://github.com/jmigueldelgado/buhayra-app"))
 
 
-             ),
-
-             box(
-               title = "Add Title", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
-               
-               tags$p("Add description")
-               )
+             )
        ),
       
       column(width = 12,
