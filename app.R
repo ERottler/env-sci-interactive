@@ -58,8 +58,31 @@ ui <- dashboardPage(
                tags$p("Source Code:", tags$a("https://github.com/ERottler/meltimr", 
                                          href ="https://github.com/ERottler/meltimr"))
              ),
+             
+             box(
+               title = "Avalanche | NatRiskChange Task Force Report", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL, collapsed = T,
+               
+               tags$p("In order to enable and enhace inderdisciplinary and inter-methodological team work, PhD studens of the DFG-funded
+                      Research Training Group", tags$a("NatRiskChange", href = "https://www.uni-potsdam.de/en/natriskchange"),
+                      "investigate recent natural disasters under real-time conditions. On 28/12/2019, a large avalanche buried several skiers
+                      in the ski resort at the Val Senales Glacier, South Tyrol, Italy. The event was investigated in more detail. The examination includes
+                      a compilationf and summary of the media coverage, the description of the accident based on media and avalanche reports,
+                      a field trip to the site of accident indluding practical and theoretical teaching units on snow research and avalanche awareness and the analysis
+                      of measruement data from a nearby climate station. The full report is available in form a Shiny dashboard."),
+               
+               tags$p("Dashboard:", tags$a("http://natriskchange.ad.umwelt.uni-potsdam.de:3838/avalanche/", 
+                                           href ="http://natriskchange.ad.umwelt.uni-potsdam.de:3838/avalanche/")),
+               tags$p("Source Code:", tags$a("https://github.com/ERottler/nrc_avalanche", 
+                                             href ="https://github.com/ERottler/nrc_avalanche"))
+               
+             )
 
-                          box(
+             ),
+      
+      #right column of the Shiny dashboard
+      column(width = 6,
+             
+             box(
                title = "Seca Vista | Drought Forecase Ceara (Brazil)", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
                
                tags$p("SecaVista provides monthly meteorological and hydrological drought severity forecasts with a
@@ -74,35 +97,12 @@ local meteorological network."),
                tags$p("Web App:", tags$a("http://seca-vista.geo.uni-potsdam.de:3838/seca-vista-app/", 
                                          href ="http://seca-vista.geo.uni-potsdam.de:3838/seca-vista-app/")),
                tags$p("Research Article:", tags$a("https://hess.copernicus.org/articles/22/5041/2018/", 
-                                                href ="https://hess.copernicus.org/articles/22/5041/2018/"))
-               
-             )
-             ),
-      
-      #right column of the Shiny dashboard
-      column(width = 6,
-             
-             
-             box(
-               title = "Avalanche | NatRiskChange Task Force Report", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
-               
-               tags$p("In order to enable and enhace inderdisciplinary and inter-methodological team work, PhD studens of the DFG-funded
-                      Research Training Group", tags$a("NatRiskChange", href = "https://www.uni-potsdam.de/en/natriskchange"),
-                      "investigate recent natural disasters under real-time conditions. On 28/12/2019, a large avalanche buried several skiers
-                      in the ski resort at the Val Senales Glacier, South Tyrol, Italy. The event was investigated in more detail. The examination includes
-                      a compilationf and summary of the media coverage, the description of the accident based on media and avalanche reports,
-                      a field trip to the site of accident indluding practical and theoretical teaching units on snow research and avalanche awareness and the analysis
-                      of measruement data from a nearby climate station. The full report is available in form a Shiny dashboard."),
-               
-               tags$p("Dashboard:", tags$a("http://natriskchange.ad.umwelt.uni-potsdam.de:3838/avalanche/", 
-                                         href ="http://natriskchange.ad.umwelt.uni-potsdam.de:3838/avalanche/")),
-               tags$p("Source Code:", tags$a("https://github.com/ERottler/nrc_avalanche", 
-                                             href ="https://github.com/ERottler/nrc_avalanche"))
+                                                  href ="https://hess.copernicus.org/articles/22/5041/2018/"))
                
              ),
              
              box(
-               title = "Buhayra | A prototype product for presenting distributed water storage in a large reservoir network", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
+               title = "Buhayra | A prototype product for presenting distributed water storage in a large reservoir network", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL, collapsed = T,
                
                tags$p("Due to frequent cloud cover, continuous monitoring using optical satellite data does not achieve
 complete coverage of dense reservoir networks typical of semi-arid regions. Only synthetic aperture radar (SAR) remote sensing systems like Sentinel-1 enable a consistent detection through
