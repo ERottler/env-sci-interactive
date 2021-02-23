@@ -12,8 +12,8 @@ ui <- dashboardPage(
   
   skin = "black",
   
-  dashboardHeader(title = "Interactive Environmental Sciences",
-                  titleWidth = 350
+  dashboardHeader(title = "Inte-R-active Environmental Sciences",
+                  titleWidth = 370
   ),
   
   dashboardSidebar(disable = TRUE),
@@ -31,17 +31,20 @@ ui <- dashboardPage(
                               '))),
     fluidRow(
       
-      #left column of the Shiny dashbboard
-      column(width = 6,
+      #Intro accross entire dashbboard
+      column(width = 12,
              box(
-               title = "Scentifically engineered applications, maps, graphs,..", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL,
+               title = "Scentifically engineered applications, maps, graphs,...", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL,
                tags$p("In recent years, the potential of interactive web tools to share information is increasingly recognized and used in the 
                        scientific community. Researchers need to further harness this potential and develop easy accessible online tools that 
-                       can be used in- and outside the scientific community to explore, learn, teach and communicate environmentally relevant topics. 
-                       In the following, an overview of scientifically engineered online tools developed at the Institute of Environmental Sciences, University of Potsdam."
+                       can be used in- and outside the scientific community to explore, learn, teach and communicate environmental issues. 
+                       In the following, an overview of scientifically engineered interactive tools developed by environmental researchers in Potsdam/Berlin
+                       using", tags$a("R", href = "https://www.r-project.org/"), "."
                       )
-               ),
-             
+               )
+      ),
+      #left column of the Shiny dashbboard
+      column(width = 6,
              box(
                title = "Hydro Explorer | Changes in river runoff all over the world", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL,
                
@@ -121,24 +124,78 @@ efficiently render large amounts of watermasks and serve them to a web applicati
 
              )
        ),
+                
       
+      #Introduction box additional further tools, models, packages,...
+      column(width = 12,
+             
+             box(
+               title = "Further tools, models, packages,...", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = F,
+               tags$p("You want to get to know further tools, models, packages,...engineerd by environemntal researcher in Potsdam/Berlin? And not only based on R, but using
+                      Pyhton, Matlab,...? Then enjoy browsing through the following compilation.")
+             )
+             
+      ),
+      
+      #rigth column further tools, models, packages,...
+      column(width = 6,
+             
+             box(
+               title = "WASA-SED | Numerical Model for hydrological and sediment fluxes", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("WASA-SED is a numerical model that allows for the simulation of hydrological and sediment fluxes at the meso-scale enigeered at the University of Potsdam.
+                      The continous, deterministic and spatially semi-distributed model originally was developed by",
+                      tags$a("Guentner (2002)", href = "https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/59/file/guentner.pdf"),
+                      "to quantify water availability in semi-arid regions. Ever since the first set-up, WASA-SED is subject to the process of advancement and
+                      expansion. Most important steps were the incorporation of a",
+                      tags$a("sediment routine", href = "https://gmd.copernicus.org/articles/3/275/2010/gmd-3-275-2010.pdf"),
+                      "and the",
+                      tags$a("development", href = "https://doi.org/10.1016/j.jhydrol.2004.04.008"), "and",
+                      tags$a("automatization", href = "https://doi.org/10.1080/13658810701300873"),
+                      "of a semi-distributed approach bbase on hillslopes. Recent model extentions inlude the implementation of a physically-based
+                      snow routine and a reservoirs module."),
+               tags$p("Source Code:", tags$a("https://github.com/TillF/WASA-SED", href = "https://github.com/TillF/WASA-SED"))
+             ),
+             
+             box(
+               title = "TopoToolbbox | MATLAB-based software for topographic analysis", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("TopoToolbox provides a set of MATLAB functions that support the analysis of relief and flow pathways in digital elevation models. The major aim of TopoToolbox 
+                      is to offer helpful analytical GIS utilities in a non-GIS environment in order to support the simultaneous application of GIS-specific and other quantitative methods."),
+               tags$p("Website:", tags$a("https://topotoolbox.wordpress.com/", href = "https://topotoolbox.wordpress.com/")),
+               tags$p("Source Code:", tags$a("https://github.com/wschwanghart/topotoolbox", href = "https://github.com/wschwanghart/topotoolbox"))
+             )
+             
+      ),
+      
+      #right column further tools, models, packages,...
+      column(width = 6,
+             
+             box(
+               title = "rainymotion | Python library for radar-based precipitation nowcasting", collapsible = T,  status = NULL, solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("Precipitation nowcasting has become an essential technique in various application context, such as early warming
+                      or urban sewage control. The Python library rainymotion serves as tool for fast, free, and transparent precipitation nowcasting, is based only on free and open source software,
+                      and can serve as a benchmark for further model development and hypothesis testing."),
+               tags$p("Source Code:", tags$a("https://github.com/hydrogo/rainymotion", href = "https://github.com/hydrogo/rainymotion")),
+               tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-12-1387-2019", href = "https://doi.org/10.5194/gmd-12-1387-2019"))
+             )
+      ),
+      
+      #Contact information accross entire dashboard
       column(width = 12,
              
              box(
                title = "Contact", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = F,
-               
                tags$p("Should you have any questions suggestions or need more information, please do not hesitate to contact
                       the developers of the individual tools. Should you have questions regarding this Shiny dashbboard,
                       please vsit the", tags$a("repository", href = "https://github.com/ERottler/env-sci-interactive"),
                       "of this project or write an email to rottler(a)uni-potsdam.de or martinsd(a)uni-potsdam.de")
              )
              
-             )
-                
-                
       )
-    
-      )
+      
+      
+    )
+
+      )#dashboardBody
       )
 
 server <- function(input, output, session) {
