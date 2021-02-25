@@ -7,10 +7,12 @@
 
 library(shiny)
 library(shinydashboard)
+library(shinyWidgets)
 
 ui <- dashboardPage(
   
   skin = "black",
+  
   
   dashboardHeader(title = "Inte-R-active Environmental Sciences",
                   titleWidth = 370
@@ -29,6 +31,25 @@ ui <- dashboardPage(
                               }
                               
                               '))),
+    tags$style(HTML("
+
+                    .box.box-solid.box-primary>.box-header {
+                    color:#fff;
+                    background:#999999
+                    }
+
+                    .box.box-solid.box-primary{
+                    border-bottom-color:#333333;
+                    border-left-color:#333333;
+                    border-right-color:#333333;
+                    border-top-color:#333333;
+                    background:#999999
+                    }
+
+                    ")),
+    
+    tags$head(tags$style(HTML("a {color: #336666}"))),
+    
     fluidRow(
       
       #Intro accross entire dashbboard
@@ -183,7 +204,7 @@ efficiently render large amounts of watermasks and serve them to a web applicati
       column(width = 12,
              
              box(
-               title = "Contact", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = F,
+               title = "Contact", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("Should you have any questions suggestions or need more information, please do not hesitate to contact
                       the developers of the individual tools. Should you have questions regarding this Shiny dashbboard,
                       please vsit the", tags$a("repository", href = "https://github.com/ERottler/env-sci-interactive"),
