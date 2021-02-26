@@ -14,7 +14,7 @@ ui <- dashboardPage(
   skin = "black",
   
   
-  dashboardHeader(title = "Inte-R-active Environmental Sciences",
+  dashboardHeader(title = span("Inte-R-active Environmental Sciences", style = "color: #336666;"),
                   titleWidth = 370
   ),
   
@@ -26,8 +26,8 @@ ui <- dashboardPage(
                               /* body */
                               .content-wrapper, .right-side {
                               background-color: lightgrey;
-                              # font-family: Times New Roman;
-  
+                              text-align: justify;
+                              font-family:  sans-serif;
                               }
                               
                               '))),
