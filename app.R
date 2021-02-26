@@ -14,39 +14,44 @@ ui <- dashboardPage(
   skin = "black",
   
   
-  dashboardHeader(title = span("Inte-R-active Environmental Sciences", style = "color: #336666;"),
-                  titleWidth = 370
+  dashboardHeader(title = "Inte-R-active Environmental Sciences",
+                  titleWidth = 450
   ),
   
   dashboardSidebar(disable = TRUE),
   
   dashboardBody(
+    
     tags$head(tags$style(HTML('
-                              
-                              /* body */
-                              .content-wrapper, .right-side {
-                              background-color: lightgrey;
-                              text-align: justify;
-                              font-family:  sans-serif;
-                              }
-                              
-                              '))),
-    tags$style(HTML("
 
-                    .box.box-solid.box-primary>.box-header {
-                    color:#fff;
-                    background:#999999
-                    }
+      .main-header .logo {
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      }
 
-                    .box.box-solid.box-primary{
-                    border-bottom-color:#333333;
-                    border-left-color:#333333;
-                    border-right-color:#333333;
-                    border-top-color:#333333;
-                    background:#999999
-                    }
+      /* body */
+      .content-wrapper, .right-side {
+      background-color: lightgrey;
+      text-align: justify;
+      font-family:  sans-serif;
+      }
 
-                    ")),
+      .box.box-solid.box-primary>.box-header {
+      color:#fff;
+      background:#999999
+      }
+
+      .box.box-solid.box-primary{
+      border-bottom-color:#333333;
+      border-left-color:#333333;
+      border-right-color:#333333;
+      border-top-color:#333333;
+      background:#999999
+      }
+
+    '))),
+    
     
     tags$head(tags$style(HTML("a {color: #336666}"))),
     
