@@ -119,6 +119,22 @@ ui <- dashboardPage(
              ),
              
              box(
+               title = "datacleanr | Interactive and Reproducible Data Cleaning", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               
+               tags$p("datacleanr is a flexible and efficient tool for interactive data cleaning, and is inherently
+                      interoperable, as it seamlessly integrates into reproducible data analysis pipelines in R. 
+                      It can deal wiht nested tabular, as well as spatial and time series data. The datacleanr is
+                      developed using the Shiny package, and relies on informative summaries, visual cues and interactive
+                      data selection and annotation. All data-altering operations are documented, and converted to valid R code
+                      (reproducible recipe), that can be copied, sent to an active RStudio script, or saved to disk."
+               ),
+               tags$p("CRAN:", tags$a("https://cran.r-project.org/package=datacleanr", 
+                                         href ="https://cran.r-project.org/web/packages/datacleanr/index.html")),
+               tags$p("Source Code:", tags$a("https://github.com/the-Hull/datacleanr", 
+                                             href ="https://github.com/the-Hull/datacleanr"))
+             ),
+             
+             box(
                title = "Avalanche | NatRiskChange Task Force Report", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
                
                tags$p("In order to enable and enhace inderdisciplinary and inter-methodological team work, PhD studens of the DFG-funded
