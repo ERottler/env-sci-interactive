@@ -219,6 +219,14 @@ ui <- dashboardPage(
       column(width = 6,
              
              box(
+               title = "TopoToolbbox | MATLAB-based software for topographic analysis", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("TopoToolbox provides a set of MATLAB functions that support the analysis of relief and flow pathways in digital elevation models. The major aim of TopoToolbox 
+                      is to offer helpful analytical GIS utilities in a non-GIS environment in order to support the simultaneous application of GIS-specific and other quantitative methods."),
+               tags$p("Website:", tags$a("https://topotoolbox.wordpress.com/", href = "https://topotoolbox.wordpress.com/")),
+               tags$p("Source Code:", tags$a("https://github.com/wschwanghart/topotoolbox", href = "https://github.com/wschwanghart/topotoolbox"))
+             ),
+             
+             box(
                title = "WASA-SED | Numerical Model for hydrological and sediment fluxes", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("WASA-SED is a numerical model that allows for the simulation of hydrological and sediment fluxes at the meso-scale enigeered at the University of Potsdam.
                       The continous, deterministic and spatially semi-distributed model originally was developed by",
@@ -232,14 +240,6 @@ ui <- dashboardPage(
                       "of a semi-distributed approach bbase on hillslopes. Recent model extentions inlude the implementation of a physically-based
                       snow routine and a reservoirs module."),
                tags$p("Source Code:", tags$a("https://github.com/TillF/WASA-SED", href = "https://github.com/TillF/WASA-SED"))
-             ),
-             
-             box(
-               title = "TopoToolbbox | MATLAB-based software for topographic analysis", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
-               tags$p("TopoToolbox provides a set of MATLAB functions that support the analysis of relief and flow pathways in digital elevation models. The major aim of TopoToolbox 
-                      is to offer helpful analytical GIS utilities in a non-GIS environment in order to support the simultaneous application of GIS-specific and other quantitative methods."),
-               tags$p("Website:", tags$a("https://topotoolbox.wordpress.com/", href = "https://topotoolbox.wordpress.com/")),
-               tags$p("Source Code:", tags$a("https://github.com/wschwanghart/topotoolbox", href = "https://github.com/wschwanghart/topotoolbox"))
              )
              
       ),
@@ -255,6 +255,17 @@ ui <- dashboardPage(
                       and can serve as a benchmark for further model development and hypothesis testing."),
                tags$p("Source Code:", tags$a("https://github.com/hydrogo/rainymotion", href = "https://github.com/hydrogo/rainymotion")),
                tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-12-1387-2019", href = "https://doi.org/10.5194/gmd-12-1387-2019"))
+             ),
+             
+             box(
+               title = "RainNet | A convolutional neural network for radar-based precipitatin nowcasting", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("RainNet was trained to predict continuous precipitation intensities at a lead time of five minutes, using several years of quality-controlled weather radar composites provided 
+                      by the German Weather Service (DWD). The RainNet's design was inspired by the U-Net and SegNet families of deep learning models which were originally designed for binary segmentation tasks. 
+                      RainNet follows an encoder-decoder architecture in which the encoder progressively downscales the spatial resolution using pooling, followed by convolutional layers; and the decoder 
+                      progressively upscales the learned patterns to a higher spatial resolution using upsampling, followed by convolutional layers. There are skip connections from the encoder to the decoder 
+                      branches in order to ensure semantic connectivity between features on different layers. In total, RainNet has 20 convolutional, four max pooling, four upsampling, two dropout layers, and four skip connections."),
+               tags$p("Source Code:", tags$a("https://github.com/hydrogo/rainnet", href = "https://github.com/hydrogo/rainnet")),
+               tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-13-2631-2020", href = "https://doi.org/10.5194/gmd-13-2631-2020"))
              )
       ),
       
