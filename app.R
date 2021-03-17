@@ -229,9 +229,9 @@ ui <- dashboardPage(
              box(
                title = "WASA-SED | Numerical Model for hydrological and sediment fluxes", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("WASA-SED is a numerical model that allows for the simulation of hydrological and sediment fluxes at the meso-scale enigeered at the University of Potsdam.
-                      The continous, deterministic and spatially semi-distributed model originally was developed by",
-                      tags$a("Guentner (2002)", href = "https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/59/file/guentner.pdf"),
-                      "to quantify water availability in semi-arid regions. Ever since the first set-up, WASA-SED is subject to the process of advancement and
+                      The continous, deterministic and spatially semi-distributed model originally was developed in the framework of a ",
+                      tags$a("dissertation", href = "https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/59/file/guentner.pdf"),
+                      "by Andreas Güntner to quantify water availability in semi-arid regions. Ever since the first set-up, WASA-SED is subject to the process of advancement and
                       expansion. Most important steps were the incorporation of a",
                       tags$a("sediment routine", href = "https://gmd.copernicus.org/articles/3/275/2010/gmd-3-275-2010.pdf"),
                       "and the",
@@ -240,6 +240,18 @@ ui <- dashboardPage(
                       "of a semi-distributed approach bbase on hillslopes. Recent model extentions inlude the implementation of a physically-based
                       snow routine and a reservoirs module."),
                tags$p("Source Code:", tags$a("https://github.com/TillF/WASA-SED", href = "https://github.com/TillF/WASA-SED"))
+             ),
+             
+             box(
+               title = "lumpR | Landscape Unit Mapping for R", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("The R package provides functions for a semi-automated approach of the delineation and description of landscape units and partition into
+                      terrain components.  It can be used for the pre-processing of semi-distributed large-scale hydrological and erosion models using 
+                      catena-representation (WASA-SED, CATFLOW). It is closely connected to and uses functionalities of GRASS GIS. Additional pre-processing 
+                      tools beyond the scope of the original LUMP algorithm are included."),
+               tags$p("Source Code:", tags$a("https://github.com/tpilz/lumpR", href = "https://github.com/tpilz/lumpR")),
+               tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-10-3001-2017", 
+                                                  href ="https://doi.org/10.5194/gmd-10-3001-2017"))
+               
              )
              
       ),
@@ -266,6 +278,18 @@ ui <- dashboardPage(
                       branches in order to ensure semantic connectivity between features on different layers. In total, RainNet has 20 convolutional, four max pooling, four upsampling, two dropout layers, and four skip connections."),
                tags$p("Source Code:", tags$a("https://github.com/hydrogo/rainnet", href = "https://github.com/hydrogo/rainnet")),
                tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-13-2631-2020", href = "https://doi.org/10.5194/gmd-13-2631-2020"))
+             ),
+             
+             box(
+               title = "ECHSE | Eco-Hydrological Simulation Environment", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("The ECHSE is a modeling framework aimed at facilitating the rapid development of hydrological model engines. It is applicable, for example, 
+                      to dynamic simulation problems arising in rainfall-runoff or water quality modeling. In ECHSE-based models, the system of interest is modeled as 
+                      a collection of interacting objects (of one ore more classes). The models are primarily applicable to situations where the objects interact in a 
+                      feed-forward manner (one-way interactions). Feedbacks (two-way interactions) are supported but numerical accuracy is currently limited to 1st order. 
+                      Thus, the framework is NOT suited, for example, to solve partial differential equations (groundwater flow, St. Venant equations, etc.). The framework 
+                      is implemented in C++ and supports shared memory parallel computing. It can be run on different platforms, namely recent versions of Linux and Windows."),
+               tags$p("Source Code:", tags$a("https://github.com/echse", href = "https://github.com/echse")),
+               tags$p("Project website:", tags$a("https://github.com/echse/echse.github.io", href = "https://github.com/echse/echse.github.io"))
              )
       ),
       
