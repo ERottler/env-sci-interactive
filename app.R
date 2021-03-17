@@ -26,17 +26,18 @@ ui <- dashboardPage(
                          
       /* logo */
       .skin-blue .main-header .logo {
-      background-color: #006699;
+      background-color: #000000;
+      color:#FFFFFF;
       }
                               
       /* logo when hovered */
       .skin-blue .main-header .logo:hover {
-      background-color: #006699;
+      background-color: #000000;
       }
                               
       /* navbar (rest of the header) */
       .skin-blue .main-header .navbar {
-      background-color: #006699;
+      background-color: #000000;
       }
                               
       .main-header .logo {
@@ -47,15 +48,15 @@ ui <- dashboardPage(
 
       /* body */
       .content-wrapper, .right-side {
-      background-color: #FFFFFF;
+      background-color: #333333;
       text-align: justify;
       font-family:  sans-serif;
       font-size: 14px;
       }
 
       .box.box-solid.box-primary>.box-header {
-      color:#000000;
-      background:#CCCCCC
+      color:#6699CC;
+      background:#000000
       }
 
       .box.box-solid.box-primary{
@@ -63,12 +64,13 @@ ui <- dashboardPage(
       border-left-color:#000000;
       border-right-color:#000000;
       border-top-color:#000000;
-      background:#FFFFFF
+      background:#333333;
+      color:#FFFFFF
       }
 
       .box.box-solid.box-info>.box-header {
-      color:#FFFFFF;
-      background:#006699
+      color:#669900;
+      background:#000000
       }
 
       .box.box-solid.box-info{
@@ -76,17 +78,59 @@ ui <- dashboardPage(
       border-left-color:#000000;
       border-right-color:#000000;
       border-top-color:#000000;
-      background:#FFFFFF
+      background:#333333;
+      color:#FFFFFF
+      }
+
+      .box.box-solid.box-warning>.box-header {
+      color:#FFCC33;
+      background:#000000
+      }
+
+      .box.box-solid.box-warning{
+      border-bottom-color: #000000;
+      border-left-color:#000000;
+      border-right-color:#000000;
+      border-top-color:#000000;
+      background:#333333;
+      color:#FFFFFF
+      }
+
+      .box.box-solid.box-danger>.box-header {
+      color:#663399;
+      background:#000000
+      }
+
+      .box.box-solid.box-danger{
+      border-bottom-color: #000000;
+      border-left-color:#000000;
+      border-right-color:#000000;
+      border-top-color:#000000;
+      background:#333333;
+      color:#FFFFFF
+      }
+      .box.box-solid.box-success>.box-header {
+      color:#CC3333;
+      background:#000000
+      }
+
+      .box.box-solid.box-success{
+      border-bottom-color: #000000;
+      border-left-color:#000000;
+      border-right-color:#000000;
+      border-top-color:#000000;
+      background:#333333;
+      color:#FFFFFF
       }
 
     '))),
     
     
-    tags$head(tags$style(HTML("a {color: #006699}"))),
+    tags$head(tags$style(HTML("a {color: #669999}"))),
     
 
-    tags$h3("A short overview on", align = "center"),
-    tags$h1("scientifically engineed applications, maps, graphs,...using", tags$em(tags$b("R")), align = "center", style="color: #006699"),
+    tags$h3("A short overview on", align = "center", style="color: #FFFFFF"),
+    tags$h1("Scientifically engineed applications, maps, graphs,...using", tags$em(tags$b("R"), style="color: #6699CC"), align = "center", style="color: #FFFFFF"),
     
     br(),
     
@@ -94,8 +138,8 @@ ui <- dashboardPage(
              scientific community. Researchers need to further harness this potential and develop easy accessible online tools that 
              can be used in- and outside the scientific community to explore, learn, teach and communicate environmental issues. 
              In the following, an overview of scientifically engineered interactive tools developed by environmental researchers in Potsdam/Berlin
-             using", tags$a("R", href = "https://www.r-project.org/"), ". This compilation of available software hopefully strengthens networks among researchers,
-             inspires new ideas and helps to build up supportive structures for researchers interested in developing interactive applications.", align = "center"),
+             using R. This compilation of available software hopefully strengthens networks among researchers,
+             inspires new ideas and helps to build up supportive structures for researchers interested in developing interactive applications.", align = "center", style="color: #FFFFFF"),
     
     br(),
     br(),
@@ -204,13 +248,13 @@ ui <- dashboardPage(
           
       br(),
       
-      tags$h3("and ", align = "center"),
-      tags$h1("further tools, models, packages based on Python, Matlab,...", align = "center", style="color: #006699"),
+      tags$h3("and ", align = "center", style="color: #FFFFFF"),
+      tags$h1("further tools, models, packages based on", tags$em(tags$b("Python"), style="color: #669900"), ", ", tags$em(tags$b("Matlab"), style="color: #FFCC33"), ", ", tags$em(tags$b("C++"), style="color: #CC3333"), ", ", tags$em(tags$b("Fortran"), style="color: #663399"), ",...", align = "center", style="color: #FFFFFF"),
       
       br(),
       
       tags$h4("You want to get to know further tools, models, packages,...engineerd by environemntal researcher in Potsdam/Berlin? And not only based on R, but using
-                      Pyhton, Matlab,...? Then continue browsing through the following compilation.", align = "center"),
+                      Pyhton, Matlab,...? Then continue browsing through the following compilation.", align = "center", style="color: #FFFFFF"),
       
       br(),
       br(),
@@ -219,7 +263,7 @@ ui <- dashboardPage(
       column(width = 6,
              
              box(
-               title = "TopoToolbbox | MATLAB-based software for topographic analysis", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               title = "TopoToolbbox | MATLAB-based software for topographic analysis", collapsible = T,  status = "warning", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("TopoToolbox provides a set of MATLAB functions that support the analysis of relief and flow pathways in digital elevation models. The major aim of TopoToolbox 
                       is to offer helpful analytical GIS utilities in a non-GIS environment in order to support the simultaneous application of GIS-specific and other quantitative methods."),
                tags$p("Website:", tags$a("https://topotoolbox.wordpress.com/", href = "https://topotoolbox.wordpress.com/")),
@@ -227,7 +271,7 @@ ui <- dashboardPage(
              ),
              
              box(
-               title = "WASA-SED | Numerical Model for hydrological and sediment fluxes", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               title = "WASA-SED | Numerical Model for hydrological and sediment fluxes", collapsible = T,  status = "danger", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("WASA-SED is a numerical model that allows for the simulation of hydrological and sediment fluxes at the meso-scale enigeered at the University of Potsdam.
                       The continous, deterministic and spatially semi-distributed model originally was developed in the framework of a ",
                       tags$a("dissertation", href = "https://publishup.uni-potsdam.de/opus4-ubp/frontdoor/deliver/index/docId/59/file/guentner.pdf"),
@@ -261,7 +305,7 @@ ui <- dashboardPage(
       column(width = 6,
              
              box(
-               title = "rainymotion | Python library for radar-based precipitation nowcasting", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               title = "rainymotion | Python library for radar-based precipitation nowcasting", collapsible = T,  status = "info", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("Precipitation nowcasting has become an essential technique in various application context, such as early warming
                       or urban sewage control. The Python library rainymotion serves as tool for fast, free, and transparent precipitation nowcasting, is based only on free and open source software,
                       and can serve as a benchmark for further model development and hypothesis testing."),
@@ -270,7 +314,7 @@ ui <- dashboardPage(
              ),
              
              box(
-               title = "RainNet | A convolutional neural network for radar-based precipitatin nowcasting", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               title = "RainNet | A convolutional neural network for radar-based precipitatin nowcasting", collapsible = T,  status = "info", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("RainNet was trained to predict continuous precipitation intensities at a lead time of five minutes, using several years of quality-controlled weather radar composites provided 
                       by the German Weather Service (DWD). The RainNet's design was inspired by the U-Net and SegNet families of deep learning models which were originally designed for binary segmentation tasks. 
                       RainNet follows an encoder-decoder architecture in which the encoder progressively downscales the spatial resolution using pooling, followed by convolutional layers; and the decoder 
@@ -281,7 +325,7 @@ ui <- dashboardPage(
              ),
              
              box(
-               title = "ECHSE | Eco-Hydrological Simulation Environment", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               title = "ECHSE | Eco-Hydrological Simulation Environment", collapsible = T,  status = "success", solidHeader = TRUE,  width = NULL, collapsed = T,
                tags$p("The ECHSE is a modeling framework aimed at facilitating the rapid development of hydrological model engines. It is applicable, for example, 
                       to dynamic simulation problems arising in rainfall-runoff or water quality modeling. In ECHSE-based models, the system of interest is modeled as 
                       a collection of interacting objects (of one ore more classes). The models are primarily applicable to situations where the objects interact in a 
@@ -294,19 +338,18 @@ ui <- dashboardPage(
       ),
       
       br(),
+      br(),
+      br(),
       
       #Contact information accross entire dashboard
-      column(width = 12,
-             
-             box(
-               title = "Contact", collapsible = T,  status = "info", solidHeader = TRUE,  width = NULL, collapsed = T,
-               tags$p("Should you have any questions suggestions or need more information, please do not hesitate to contact
-                      the developers of the individual tools. Should you have questions regarding this Shiny dashbboard or want to contribute,
-                      please vsit the", tags$a("repository", href = "https://github.com/ERottler/env-sci-interactive"),
-                      "of this project or write an email to rottler(a)uni-potsdam.de or martinsd(a)uni-potsdam.de")
-             )
-             
-      )
+      
+      tags$h4("Should you have any questions, suggestions or need more information, please do not hesitate to contact
+              the developers of the individual tools. Should you have questions regarding this Shiny dashbboard or want to contribute,
+              please visit the", tags$a("repository", href = "https://github.com/ERottler/env-sci-interactive"),
+              "of this project or write an email to rottler(a)uni-potsdam.de or martinsd(a)uni-potsdam.de", 
+              align = "center", style="color: #FFFFFF")
+      
+
       
       
     )
