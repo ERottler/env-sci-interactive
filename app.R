@@ -14,7 +14,7 @@ ui <- dashboardPage(
   # skin = "black",
   
   
-  dashboardHeader(title = "Inte-R-active Environmental Sciences - Potsdam/Berlin",
+  dashboardHeader(title = "Inte-R-active Environmental Science - Potsdam/Berlin",
                   titleWidth = 550
   ),
   
@@ -130,7 +130,7 @@ ui <- dashboardPage(
     
 
     tags$h3("A short overview on", align = "center", style="color: #FFFFFF"),
-    tags$h1("Scientifically engineed applications, maps, graphs,...using", tags$em(tags$b("R"), style="color: #6699CC"), align = "center", style="color: #FFFFFF"),
+    tags$h1("Scientifically engineed interactive applications, maps, graphs,...using", tags$em(tags$b("R"), style="color: #6699CC"), align = "center", style="color: #FFFFFF"),
     
     br(),
     
@@ -296,6 +296,16 @@ ui <- dashboardPage(
                tags$p("Research Article:", tags$a("https://doi.org/10.5194/gmd-10-3001-2017", 
                                                   href ="https://doi.org/10.5194/gmd-10-3001-2017"))
                
+             ),
+             
+             box(
+               title = "ppso | Particle Swarm Optimization and Dynamically Dimensioned Search", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
+               tags$p("R package for (optionally parallelized) optimization using PSO (Particle Swarm Optimzation) or DDS (Dynamically Dimensioned Search) algorithms, which excel for multidimensional 
+                      (i.e. multi-parameter) functions with many local extrema and a restricted number of function evaluations. The parallelized version builds on Rmpi and is intended 
+                      for highly computationally intensive objective functions (>20 s evaluation time). Another focus of this package is the possibility to resume interrupted optimization 
+                      runs from the intermediate project files. These features make this package useful for the automatic calibration of complex numerical models (e.g. hydrological models)."),
+               tags$p("Source Code:", tags$a("https://github.com/TillF/ppso", href = "https://github.com/TillF/ppso"))
+               
              )
              
       ),
@@ -338,9 +348,8 @@ ui <- dashboardPage(
       ),
       
       br(),
-      br(),
-      br(),
       
+      column(width = 12,
       #Contact information accross entire dashboard
       
       tags$h4("Should you have any questions, suggestions or need more information, please do not hesitate to contact
@@ -348,6 +357,7 @@ ui <- dashboardPage(
               please visit the", tags$a("repository", href = "https://github.com/ERottler/env-sci-interactive"),
               "of this project or write an email to rottler(a)uni-potsdam.de or martinsd(a)uni-potsdam.de", 
               align = "center", style="color: #FFFFFF")
+      )
       
 
       
