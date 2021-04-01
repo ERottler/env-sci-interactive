@@ -151,10 +151,10 @@ ui <- dashboardPage(
              box(
                title = "Hydro Explorer | Changes in river runoff all over the world", collapsible = T,  status = "primary", solidHeader = TRUE,  width = NULL, collapsed = T,
                
-               tags$p("The Hydro Explorer is an interactive web application that enables the investigation of of more than 7000 daily resolution discharge time
-                      series form the Global Runoff Data Centre (GRDC) wiht regard to changs in runoff timing and ruoff seasonality. The web app allows for a 
-                      quick comparison of gauges regions, methods and time frames. A detailed description using examples from the Rhine River basin is included into the", 
-                      tags$a("research article", href = "https://doi.org/10.1002/rra.3772"), "pubblished in River Reserach and Applications."
+               tags$p("The Hydro Explorer is an interactive web application that enables the investigation of daily resolution discharge recordings
+                      with regard to changes in runoff timing and ruoff seasonality. The web app allows for the investigation of streamflow from GRDC and CAMELS data sets and a
+                      quick comparison of gauges, regions, methods and time frames. A detailed description using examples from the Rhine River basin is presented in a", 
+                      tags$a("research article", href = "https://doi.org/10.1002/rra.3772"), "published in River Reserach and Applications."
                       ),
                tags$p("Web App:", tags$a("http://natriskchange.ad.umwelt.uni-potsdam.de:3838/HydroExplorer/", 
                                          href ="http://natriskchange.ad.umwelt.uni-potsdam.de:3838/HydroExplorer/")),
